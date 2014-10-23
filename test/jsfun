@@ -9,4 +9,3 @@ function getScrollY() {
     }
 }
 
-hello
