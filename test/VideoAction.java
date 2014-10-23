@@ -149,7 +149,7 @@ public class VideoAction extends BaseAction {
 		if(imgFile.length() > MAX_IMAGE_SIZE ) {
 			throw new ActionException("图像文件大小不能超过3M！");
 		}
-		//获取上传标本图片对象
+		
 		Video video = safeVideo(ctx);
 		StorageService ss = StorageService.VIDEOPICS;
 		String ext = "." + FilenameUtils.getExtension(imgFile.getName());
