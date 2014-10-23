@@ -45,7 +45,7 @@ public class VideoAction extends BaseAction {
 			throw new ActionException("file_illegal");
 		}
 		if(file.length() > MAX_FILE_SIZE ) {
-			throw new ActionException("视频文件大小不能超过50M!");
+			throw new ActionException("视频文件大小不能超过10M!");
 		}
 		String the_path = form.getPath();
 		if(StringUtils.isNotBlank(the_path) && StorageService.VIDEOFILES.exist(the_path)){
@@ -115,10 +115,6 @@ public class VideoAction extends BaseAction {
 		}else{
 			VideoService.update(bean, form.getName(),bean.getSize(),form.getIntroduce());
 		}
-		//bean.setName(form.getName());
-		//bean.setIntroduce(form.getIntroduce());//更新视频简介
-		//bean.updateAttrs(new String[] { "name", "size" , "introduce"}, new Object[] { bean.getName(), bean.getSize(), bean.getIntroduce()});
-		//VideoService.update(bean, form.getName(),videoFile.length(),form.getIntroduce());
 		ctx.output_json("msg", "");
 	}
 	
