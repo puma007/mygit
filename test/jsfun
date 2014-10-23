@@ -7,5 +7,6 @@ function getScrollY() {
     } else if( document.documentElement && ( document.documentElement.scrollLeft || document.documentElement.scrollTop ) ) {
         scrOfY = document.documentElement.scrollTop;
     }
-    return scrOfY;
 }
+
+hello
