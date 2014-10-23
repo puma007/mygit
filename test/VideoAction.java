@@ -22,7 +22,7 @@ import my.util.Multimedia;
  * 视频action类
  */
 public class VideoAction extends BaseAction {
-	public final static long MAX_FILE_SIZE = 50 * 1024 * 1024;//视频上传大小不能超过50M
+	public final static long MAX_FILE_SIZE = 10 * 1024 * 1024;//视频上传大小不能超过50M
 	public final static long MAX_IMAGE_SIZE = 3 * 1024 * 1024;//图像文件大小不能超过3M
 	/**
 	 * 视频文件添加
@@ -31,7 +31,7 @@ public class VideoAction extends BaseAction {
 	 */
 	
 	public void add(RequestContext ctx) throws IOException{
-		Video form = ctx.form(Video.class);//http请求参数映射到bean
+		Video form = ctx.form(Video.class);
 		System.out.println("name="+ form.getName());
 		System.out.println("introduce"+form.getIntroduce());
 		if (StringUtils.isBlank(form.getName())){
