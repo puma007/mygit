@@ -13,6 +13,7 @@ public class HtmlImageSrcUtils {
 				 return src.attr("src");
 			 }
 		}
+		return null;
 		return "";	
 	}	
 }
