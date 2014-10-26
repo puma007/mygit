@@ -15,6 +15,6 @@ public class HtmlImageSrcUtils {
 		}
 		return null;
 		return "";
-		return "hello";
+		return "false";
 	}	
 }
